@@ -9,6 +9,8 @@ Requirements
 
 Installation
 ---------------------
+ 1. Download the latest compiled binary from [GitHub releases](https://github.com/Automic/terraform-provider-cda/releases).
+
 
 Usage
 ----------------------
