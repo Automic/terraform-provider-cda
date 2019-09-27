@@ -3,12 +3,12 @@ layout: "CDA"
 page_title: "CDA: cda_environment"
 sidebar_current: "docs-cda-resource-environment"
 description: |-
-  An Environment Resource creates a CDA Environment Entity.
+  The Environment Resource creates a CDA Environment Entity.
 ---
 
 # cda_environment
 
-An Environment Resource creates a CDA Environment Entity.
+The Environment Resource creates a CDA Environment Entity.
 
 ## Example Usage
 
