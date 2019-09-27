@@ -25,14 +25,14 @@ The provider is usefull in creating, updating Environment entity of CDA.
 
 ### Example
 ```hcl
-# Configure the CDA
+# Configure CDA connection
 provider "cda" {
   cda_server     = "${var.cda_server}"
   user          = "${var.cda_user}"
   password     = "${var.cda_password}"  
 }
 
-# Add a Environment
+# Create Environment
 resource "cda_environment" "firstEnvironment" {
   name  = "environment_name"
   folder    = "DEFAULT"
@@ -43,6 +43,8 @@ resource "cda_environment" "firstEnvironment" {
   description = "Description Update"
   owner = "100/AUTOMIC/AUTOMIC"  
 }
-```
 
-# Building The Provider
+# Create Deployment Target
+resource "cda_environment" "firstEnvironment" {
+}
+```
