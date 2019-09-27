@@ -1,6 +1,6 @@
 Terraform Continuous Deliver Automation Provider
 ==================
-The CDA provider is used to create and configure Entities in your CDA system. See the Usage and Documentation sections for an introduction to the provider.
+The CDA provider is used to create and configure Entities in your CDA system. See the Usage sections for an introduction to the provider.
 
 Requirements
 ------------
@@ -10,6 +10,8 @@ Requirements
 Installation
 ---------------------
  1. Download the latest compiled binary from [GitHub releases](https://github.com/Automic/terraform-provider-cda/releases).
+ 2. Unzip/untar the archive.
+ 3. Move it into $HOME\.terraform.d\plugins:
 
 
 Usage
