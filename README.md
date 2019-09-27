@@ -27,21 +27,21 @@ The provider is usefull in creating, updating Environment entity of CDA.
 ```hcl
 # Configuring the provider
 provider "cda" {
-  cda_server     = "${var.cda_server}"
-  user          = "${var.cda_user}"
-  password     = "${var.cda_password}"  
+  cda_server = "${var.cda_server}"
+  user       = "${var.cda_user}"
+  password   = "${var.cda_password}"  
 }
 
 # Creating Environment
 resource "cda_environment" "firstEnvironment" {
-  name  = "environment_name"
-  folder    = "DEFAULT"
-  custom_type  = "Generic"
+  name               = "environment_name"
+  folder             = "DEFAULT"
+  custom_type        = "Generic"
   dynamic_properties = {}
-  custom_properties = {}
+  custom_properties  = {}
   deployment_targets = []
-  description = "Description Update"
-  owner = "100/AUTOMIC/AUTOMIC"  
+  description        = "Description Update"
+  owner              = "100/AUTOMIC/AUTOMIC"  
 }
 
 # Creating Deployment Target
