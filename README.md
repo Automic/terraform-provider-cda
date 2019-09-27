@@ -12,10 +12,16 @@ Installation
  1. Download the latest compiled binary from [GitHub releases](https://github.com/Automic/terraform-provider-cda/releases).
  2. Unzip/untar the archive.
  3. Move it into ```$HOME/.terraform.d/plugins:```
+ 
     ```
     $ mkdir -p $HOME/.terraform.d/plugins/linux_amd64
-    $ mv terraform-provider-googlecalendar $HOME/.terraform.d/plugins/terraform-provider-googlecalendar_v0.1.0
-```
+    $ mv terraform-provider-cda_v1.0.0 $HOME/.terraform.d/plugins/terraform-provider-cda_v1.0.0
+    ```
+ 4. Create your Terraform configurations as normal, and run terraform init:
+
+    ```$ terraform init```
+    
+    This will find the plugin locally.
 
 Usage
 ----------------------
