@@ -14,6 +14,7 @@ Installation
  3. Move it into 
  
     <b>Linux</b>
+    
     ```$HOME/.terraform.d/plugins:```
  
     ```
