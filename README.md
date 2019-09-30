@@ -38,7 +38,7 @@ Installation
 Usage
 ----------------------
 
-To use the provider you need an Automic CDA account. You can created the following CDA Entities using the provider: Environment, Deployment Target, Log-in Object, Deployment Profile and also can trigger a Wofklow execution. For detailed resources reference see the website folder.
+To use the provider you need an Automic CDA account. You can created the following CDA Entities: Environment, Deployment Target, Log-in Object, Deployment Profile and can also trigger a Wofklow execution. For detailed resources reference see the website folder.
 
 ### Example
 ```hcl
