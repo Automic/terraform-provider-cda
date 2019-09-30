@@ -13,18 +13,19 @@ Installation
  2. Unzip/untar the archive.
  3. Move it into 
  
-    <b>Linux</b>
+      <b>Linux</b>
     
-    ```$HOME/.terraform.d/plugins:```
+      ```$HOME/.terraform.d/plugins:```
  
-    ```
-    $ mkdir -p $HOME/.terraform.d/plugins/linux_amd64
-    $ mv terraform-provider-cda_v1.0.0 $HOME/.terraform.d/plugins/terraform-provider-cda_v1.0.0
-    ```
+      ```
+      $ mkdir -p $HOME/.terraform.d/plugins/linux_amd64
+      $ mv terraform-provider-cda_v1.0.0 $HOME/.terraform.d/plugins/terraform-provider-cda_v1.0.0
+      ```
     
-    <b>Windows</b>
+      <b>Windows</b>
     
-    ```%APPDATA%\terraform.d\plugins```
+      ```%APPDATA%\terraform.d\plugins```
+      
 	
     Or put the binary in the terraform installtion folder.
     
