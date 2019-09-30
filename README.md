@@ -11,13 +11,19 @@ Installation
 ---------------------
  1. Download the latest compiled binary from [GitHub releases](https://github.com/Automic/terraform-provider-cda/releases).
  2. Unzip/untar the archive.
- 3. Move it into ```$HOME/.terraform.d/plugins:```
+ 3. Move it into 
+ 
+    <b>Linux<b>
+    ```$HOME/.terraform.d/plugins:```
  
     ```
     $ mkdir -p $HOME/.terraform.d/plugins/linux_amd64
     $ mv terraform-provider-cda_v1.0.0 $HOME/.terraform.d/plugins/terraform-provider-cda_v1.0.0
     ```
     
+    <b>Windows<b>
+	
+	
     Or put the binary in the terraform installtion folder.
     
  4. Create your Terraform configurations as normal, and run terraform init:
@@ -39,7 +45,7 @@ provider "cda" {
   user       = "${var.cda_user}"
   password   = "${var.cda_password}"  
   
-  default_attributes = {
+  default_attributes = { // Default attributes can be used to set the 'folder' and 'owner' attributes globally for the template.
     folder = "DEFAULT"
     owner  = "100/AUTOMIC/AUTOMIC"
   }
