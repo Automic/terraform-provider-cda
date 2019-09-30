@@ -23,7 +23,8 @@ Installation
     ```
     
     <b>Windows</b>
-	
+    
+    ```%APPDATA%\terraform.d\plugins```
 	
     Or put the binary in the terraform installtion folder.
     
