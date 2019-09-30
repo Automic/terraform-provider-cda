@@ -48,7 +48,7 @@ provider "cda" {
   user       = "${var.cda_user}"
   password   = "${var.cda_password}"  
   
-  default_attributes = { // Default attributes can be used to set the 'folder' and 'owner' attributes globally for the template.
+  default_attributes = { // default_attributes can be used to set the 'folder' and 'owner' attributes globally for the template.
     folder = "DEFAULT"
     owner  = "100/AUTOMIC/AUTOMIC"
   }
