@@ -51,7 +51,7 @@ The CDA provider offers the following methods for authentication, in this order:
     cda_server = "${var.cda_server}"
     user       = "${var.cda_user}"
     password   = "${var.cda_password}"
-  }```
+  }
   
 * Environment variables: Set the following environment variables ```CDA_SERVER``` ```CDA_USER``` ```CDA_PASSWORD```.
 
