@@ -46,11 +46,12 @@ The CDA provider offers the following methods for authentication, in this order:
 
 * Static credentials: Add ```user``` and ```password``` in-line in the CDA provider block.
   
-  ```provider "cda" {
+  ```
+  provider "cda" {
     cda_server = "${var.cda_server}"
     user       = "${var.cda_user}"
     password   = "${var.cda_password}"
-  }```
+  }
   
 * Environment variables: Set the following environment variables ```CDA_SERVER``` ```CDA_USER``` ```CDA_PASSWORD```.
 
