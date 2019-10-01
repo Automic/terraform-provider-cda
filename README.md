@@ -134,3 +134,20 @@ resource "cda_workflow_execution" "firstExecution" {
 
 Building the Provider
 ----------------------
+If you wish to work on the provider, you'll first need [Go](http://www.golang.org) installed on your machine.
+
+*Note:* This project uses [Go Modules](https://blog.golang.org/using-go-modules) making it safe to work with it outside of your existing [GOPATH](http://golang.org/doc/code.html#GOPATH). The instructions that follow assume a directory in your home directory outside of the standard GOPATH (i.e `$HOME/development/terraform-providers/`).
+
+Clone repository to: `$HOME/development/terraform-providers/`
+
+```sh
+$ mkdir -p $HOME/development/terraform-providers/; cd $HOME/development/terraform-providers/
+$ git clone https://github.com/Automic/terraform-provider-cda.git
+...
+```
+
+Enter the provider directory and run `go build` to build the provider
+
+```sh
+$ go build
+```
