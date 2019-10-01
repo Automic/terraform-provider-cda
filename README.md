@@ -44,8 +44,8 @@ To use the provider you need an Automic CDA account. You can created the followi
 
 The CDA provider offers the following methods for authentication, in this order:
 
-* Static credentials
-  /n Add cda_user and cda_password in-line in the CDA provider block:
+* Static credentials <br>
+  Add cda_user and cda_password in-line in the CDA provider block:
   
   ```
   provider "cda" {
@@ -54,8 +54,8 @@ The CDA provider offers the following methods for authentication, in this order:
     password   = "${var.cda_password}"
   }
   
-* Environment variables
-  \r\n Set the following environment variables ```CDA_SERVER``` ```CDA_USER``` ```CDA_PASSWORD```.
+* Environment variables <br>
+  Set the following environment variables ```CDA_SERVER``` ```CDA_USER``` ```CDA_PASSWORD```.
 
 
 ### Example
@@ -152,7 +152,7 @@ resource "cda_workflow_execution" "firstExecution" {
 
 Building the Provider
 ----------------------
-If you wish to work on the provider, you'll first need [Go](http://www.golang.org) installed on your machine.
+If you would like to work on the CDA provider, you need [Go](http://www.golang.org) installed on your machine.
 
 *Note:* This project uses [Go Modules](https://blog.golang.org/using-go-modules) making it safe to work with it outside of your existing [GOPATH](http://golang.org/doc/code.html#GOPATH). The instructions that follow assume a directory in your home directory outside of the standard GOPATH (i.e `$HOME/development/terraform-providers/`).
 
