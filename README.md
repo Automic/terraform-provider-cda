@@ -40,6 +40,14 @@ Usage
 
 To use the provider you need an Automic CDA account. You can created the following CDA Entities: Environment, Deployment Target, Log-in Object, Deployment Profile and can also trigger a Wofklow execution. For detailed resources reference see the website folder.
 
+### Authentication
+
+The CDA provider offers the following methods for authentication, in this order:
+
+* Static credentials
+* Environment variables
+
+
 ### Example
 ```hcl
 # Configuring the provider
