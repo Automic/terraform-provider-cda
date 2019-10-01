@@ -55,7 +55,7 @@ The CDA provider offers the following methods for authentication, in this order:
   }
   
 * Environment variables
-  /n Set the following environment variables ```CDA_SERVER``` ```CDA_USER``` ```CDA_PASSWORD```.
+  \r\n Set the following environment variables ```CDA_SERVER``` ```CDA_USER``` ```CDA_PASSWORD```.
 
 
 ### Example
