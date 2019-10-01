@@ -45,7 +45,7 @@ To use the provider you need an Automic CDA account. You can created the followi
 The CDA provider offers the following methods for authentication, in this order:
 
 * Static credentials
-  Add cda_user and cda_password in-line in the CDA provider block:
+  /n Add cda_user and cda_password in-line in the CDA provider block:
   
   ```
   provider "cda" {
@@ -55,7 +55,7 @@ The CDA provider offers the following methods for authentication, in this order:
   }
   
 * Environment variables
-  Set the following environment variables ```CDA_SERVER``` ```CDA_USER``` ```CDA_PASSWORD```.
+  /n Set the following environment variables ```CDA_SERVER``` ```CDA_USER``` ```CDA_PASSWORD```.
 
 
 ### Example
