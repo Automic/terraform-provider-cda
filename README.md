@@ -39,7 +39,7 @@ Authentication
 ----------------------    
 The CDA provider offers the following methods for authentication, in this order:
 
-* Static credentials: Add ```user``` and ```password``` in-line in the CDA provider block.
+* Static credentials: Add ```cda_server```, ```user``` and ```password``` in-line in the CDA provider block.
   
   ```
   provider "cda" {
