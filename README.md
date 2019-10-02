@@ -34,14 +34,9 @@ Installation
     ```$ terraform init```
     
     This will find the plugin locally.
-
-Usage
-----------------------
-
-To use the provider you need an Automic CDA account. You can created the following CDA Entities: Environment, Deployment Target, Log-in Object, Deployment Profile and can also trigger a Wofklow execution. For detailed resources reference see the website folder.
-
-### Authentication
-
+    
+Authentication
+----------------------    
 The CDA provider offers the following methods for authentication, in this order:
 
 * Static credentials: Add ```user``` and ```password``` in-line in the CDA provider block.
@@ -56,6 +51,15 @@ The CDA provider offers the following methods for authentication, in this order:
 * Environment variables: Set the following environment variables ```CDA_SERVER``` ```CDA_USER``` ```CDA_PASSWORD```.
 
   ```provider "cda" {}```
+
+
+Example Usage
+----------------------
+To use the provider you need an Automic CDA account. The following example demonstrates a current basic usage of the provider to create an Environment, Deployment Target, Log-in Object, Deployment Profile in CDA. It also shown how to trigger a Wofklow execution. For detailed resources reference see the ```examples``` folder.
+
+### Authentication
+
+
 
 
 ### Example
