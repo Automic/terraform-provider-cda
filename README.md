@@ -55,7 +55,7 @@ The CDA provider offers the following methods for authentication, in this order:
 
 Example Usage
 ----------------------
-To use the provider you need an Automic CDA account. The following example demonstrates a current basic usage of the provider to create an Environment, Deployment Target, Log-in Object, Deployment Profile in CDA. It also shown how to trigger a Wofklow execution. For detailed resources reference see the ```examples``` folder.
+The following example demonstrates a current basic usage of the provider to create an Environment, Deployment Target, Log-in Object, Deployment Profile in CDA. It also shows how to trigger a Wofklow execution. For detailed resource reference see the ```examples``` folder.
 
 ```hcl
 # Configuring the provider
