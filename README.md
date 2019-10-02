@@ -22,7 +22,7 @@ Installation
       $ mv terraform-provider-cda_v1.0.0 $HOME/.terraform.d/plugins/terraform-provider-cda_v1.0.0
       ```
     
-      <b>Windows</b>
+      ### Windows
     
       ```%APPDATA%\terraform.d\plugins```
       
@@ -57,12 +57,6 @@ Example Usage
 ----------------------
 To use the provider you need an Automic CDA account. The following example demonstrates a current basic usage of the provider to create an Environment, Deployment Target, Log-in Object, Deployment Profile in CDA. It also shown how to trigger a Wofklow execution. For detailed resources reference see the ```examples``` folder.
 
-### Authentication
-
-
-
-
-### Example
 ```hcl
 # Configuring the provider
 provider "cda" {
