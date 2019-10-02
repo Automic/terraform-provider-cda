@@ -22,7 +22,7 @@ Installation
       $ mv terraform-provider-cda_v1.0.0 $HOME/.terraform.d/plugins/terraform-provider-cda_v1.0.0
       ```
     
-      ### Windows
+      <b>Windows</b>
     
       ```%APPDATA%\terraform.d\plugins```
       
