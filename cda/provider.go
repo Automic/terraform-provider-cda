@@ -11,19 +11,19 @@ func Provider() terraform.ResourceProvider {
 			cdaServer: {
 				Type:        schema.TypeString,
 				Optional:    true,
-				DefaultFunc: schema.EnvDefaultFunc("CDA_URL", ""),
+				DefaultFunc: schema.EnvDefaultFunc(environmentVariableMaps[cdaServer], ""),
 				Description: descriptions[cdaServer],
 			},
 			cdaUser: {
 				Type:        schema.TypeString,
 				Optional:    true,
-				DefaultFunc: schema.EnvDefaultFunc("CDA_USER", ""),
+				DefaultFunc: schema.EnvDefaultFunc(environmentVariableMaps[cdaUser], ""),
 				Description: descriptions[cdaUser],
 			},
 			password: {
 				Type:        schema.TypeString,
 				Optional:    true,
-				DefaultFunc: schema.EnvDefaultFunc("CDA_PASSWORD", ""),
+				DefaultFunc: schema.EnvDefaultFunc(environmentVariableMaps[password], ""),
 				Description: descriptions[password],
 			},
 			defaultAttributes: {

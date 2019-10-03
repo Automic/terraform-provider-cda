@@ -44,9 +44,9 @@ func SetUpTest() error {
 	}
 
 	os.Setenv("TF_ACC", mapConfig["TF_ACC"])
-	os.Setenv("cda_server", mapConfig["CDA_SERVER"])
-	os.Setenv("user", mapConfig["CDA_USER"])
-	os.Setenv("password", mapConfig["CDA_PASSWORD"])
+	os.Setenv(environmentVariableMaps[cdaServer], mapConfig["CDA_SERVER"])
+	os.Setenv(environmentVariableMaps[cdaUser], mapConfig["CDA_USER"])
+	os.Setenv(environmentVariableMaps[password], mapConfig["CDA_PASSWORD"])
 
 	return nil
 }

@@ -28,15 +28,15 @@ func TestProvider_impl(t *testing.T) {
 }
 
 func testAccPreCheck(t *testing.T) {
-	if v := os.Getenv(cdaServer); v == "" {
+	if v := os.Getenv(environmentVariableMaps[cdaServer]); v == "" {
 		t.Fatal("cda_server must be set for acceptance tests")
 	}
 
-	if v := os.Getenv(cdaUser); v == "" {
+	if v := os.Getenv(environmentVariableMaps[cdaUser]); v == "" {
 		t.Fatal("user must be set for acceptance tests")
 	}
 
-	if v := os.Getenv(password); v == "" {
+	if v := os.Getenv(environmentVariableMaps[password]); v == "" {
 		t.Fatal("password must be set for acceptance tests")
 	}
 }

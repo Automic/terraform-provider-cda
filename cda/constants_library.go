@@ -68,6 +68,12 @@ const (
 	LoginObjectType
 )
 
+var environmentVariableMaps = map[string]string{
+	cdaServer: "CDA_SERVER",
+	cdaUser:   "CDA_USER",
+	password:  "CDA_PASSWORD",
+}
+
 var routerMaps = map[EntityType]string{
 	DeploymentProfileType: "profiles",
 	EnvironmentType:       "environments",
