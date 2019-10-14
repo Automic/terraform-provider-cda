@@ -27,7 +27,7 @@ Installation
       ```%APPDATA%\terraform.d\plugins```
       
 	
-    Or put the binary in the terraform installtion folder.
+    Or put the binary in the terraform installation folder.
     
  4. Create your Terraform configurations as normal, and run terraform init:
 
