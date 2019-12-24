@@ -6,7 +6,7 @@ description: |-
   A Workflow Execution Resource execute a CDA Workflow.
 ---
 
-# cda_environment
+# cda_workflow_execution
 
 A Workflow Execution Resource execute a CDA Workflow.
 
