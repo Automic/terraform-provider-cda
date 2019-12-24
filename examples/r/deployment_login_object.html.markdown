@@ -6,7 +6,7 @@ description: |-
   A Login Object Resource creates a CDA Login Object Entity.
 ---
 
-# cda_deployment_target
+# cda_login_object
 
 A Login Object Resource creates a CDA Login Object Entity.
 
