@@ -6,7 +6,7 @@ description: |-
   A Deployment Profile Resource creates a CDA Deployment Profile Entity.
 ---
 
-# cda_deployment_target
+# cda_deployment_profile
 
 A Deployment Profile Resource creates a CDA Deployment Profile Entity.
 
