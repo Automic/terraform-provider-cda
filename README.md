@@ -167,3 +167,183 @@ Enter the provider directory and run `go build` to build the provider
 ```sh
 $ go build
 ```
+
+# Terraform Automic Agent Install Provisioner
+Automic Agent Install is a Terraform Provisioner which can install CDA Agent and Service Manager on both public and private clouds.
+
+# How to use Provisioner
+- Download Terraform Automic Agent Install Provisioner from [release](https://github.com/Automic/terraform-provider-cda/releases)
+- Extract downloaded artifact and copy terraform-provisioner-automic_agent_install binary to terraform folder
+
+## Input
+- Agent, Service Manager artifacts & install script which could be downloaded from released version
+- Automation Engine connection: host, port and system name
+
+## Connection
+Precondition, the instance where the the Agent and Service Manager will be installed must already have an user created. This user must have sufficient rights to execute the install script.
+
+## Argument Reference
+
+|Attribute|Type|Mandatory/Optional|Default Value|Description|
+|--|--|--|--|--|
+|destination|String|M||The target folder to install agent & service manager|
+|source|String|M||The local folder which contains artifacts and install script|
+|agent_name|String|M||Agent name will be installed|
+|agent_port|String|O|2300|Agent port will be install|
+|ae_host|String|M||Automation Engine host|
+|ae_port|String|M||Automation Engine port|
+|ae_system_name|String|M||Automation Engine name|
+|sm_name|String|M||Service Manager name|
+|sm_host|String|O|8871|Service Manager host|
+|variables|Map|O|{}|The terraform map that contains override & custom variables for agent configuration|
+
+## Example
+Here is an example to create a aws unix instance and install CDA agent and service manager on this instance.
+```
+provider "aws" {
+  region = "ap-southeast-1"
+  access_key = "${var.aws_access_key}"
+  secret_key = "${var.aws_secret_key}"
+}
+
+resource "aws_instance" "cda_instance" {
+  ami = "${var.aws_ami}"
+  instance_type = "t2.micro"
+  vpc_security_group_ids = [
+    "${var.aws_security_group_id}"]
+  key_name = "${var.aws_key_name}"
+
+
+  tags = {
+    Name = "cda_instance"
+  }
+
+  provisioner "automic_agent_install" {
+    destination = "CDA"
+    source = "C:\\Users\\abc\\Documents\\install"
+
+    agent_name = "${random_string.cda_entity_name.result}"
+    agent_port = "${var.agent_port}"
+    ae_system_name = "${var.ae_system_name}"
+    ae_host = "${var.ae_host}"
+    ae_port = "${var.ae_port}"
+    sm_port = "${var.sm_port}"
+    sm_name = "${var.sm_name}${random_string.cda_entity_name.result}"
+
+    variables = {
+      UC_EX_PATH_JOBREPORT = "../tmp"   //override existing variable
+      UC_EX_PATH_TEMP = "../tmp"    //override existing variable
+      UC_EX_NEW_VARIABLE = "VALUE"    //add new variable to agent configuration
+      UC_EX_IP_ADDR = "${self.public_ip}"   //add new variable to agent configuration
+    }
+
+    connection {
+      host = self.public_ip
+      type = "ssh"
+      user = "ubuntu"
+      private_key = "${file("${var.private_key_file}")}"
+    }
+  }
+}
+
+resource "random_string" "cda_entity_name" {
+  length = 10
+  special = false
+  lower = false
+}
+```
+
+After applying successfully you will see some logs in console:
+
+```
+aws_instance.cda_instance (automic_agent_install): Installed Directory: /home/ubuntu/AE
+aws_instance.cda_instance (automic_agent_install): Agent Name: 45FIOE1ZXH
+aws_instance.cda_instance (automic_agent_install): Agent Port: 2300
+aws_instance.cda_instance (automic_agent_install): Service Manager Name: sm_45FIOE1ZXH
+aws_instance.cda_instance (automic_agent_install): Service Manager Port: 8871
+```
+
+
+## For users want to user other version of CDA Agent and Service Manager
+Users have to create a new artifact follow exactly below structure:
+### Linux
+#### Agent
+- Copy files from other x64 version of CDA Agent and create a structure like:
+
+```bash
+ucxjlx6
+├── backup
+├── bin
+│   ├── ucx.msl
+│   ├── ucxjlx6
+│   ├── ucxjlx6m
+│   ├── ucxjlx6s
+│   └── ucxjxxx.ori.ini
+├── out
+├── resources
+└── temp
+```
+- Archive above folder with name: ucxjlx6.tar.gz
+- Replace existing ucxjlx6.tar.gz in source folder
+
+#### Service Manager
+- Copy files from other x64 version of CDA Service Manager and create a structure like:
+
+```bash
+ucsmgrlx6
+├── bin
+│   ├── automicsm
+│   ├── libgcc_s.so
+│   ├── libgcc_s.so.1
+│   ├── libssp.so
+│   ├── libssp.so.0
+│   ├── libssp.so.0.0.0
+│   ├── libstdc++.so
+│   ├── libstdc++.so.6
+│   ├── libstdc++.so.6.0.3
+│   ├── libsysapi.so
+│   ├── libzu00132.so
+│   ├── uc.msl
+│   ├── uc4.ori.smd
+│   ├── ucybsmcl
+│   ├── ucybsmgr
+│   └── ucybsmgr.ori.ini
+└── temp
+```
+- Archive above folder with name: ucsmgrlx6.tar.gz
+- Replace existing ucsmgrlx6.tar.gz in source folder
+
+### Windows
+#### Agent
+- Copy files from other x64 version of CDA Agent and create a structure like:
+```bash
+agent
+├── trp3.cab
+├── SETUP.EXE
+├── Setup.lst
+├── uc.msl
+├── ucsmtp.dll
+├── ucxjwx6.exe
+├── UCXJWX6.ini
+├── ucxjwx6m.exe
+├── zu00132.dll
+└── zuksp.dll
+```
+- Archive above folder with name: agent.zip
+- Replace existing agent.zip in source folder
+
+#### Service Manager
+- Copy files from other x64 version of CDA Service Manager and create a structure like:
+```bash
+servicemanager
+├── bootstrp3.cab
+├── SETUP.EXE
+├── SETUP.LST
+├── uc.msl
+├── UC4.smd
+├── UCYBSMgr.exe
+├── ucybsmgr.ini
+└── zu00132.dll
+```
+- Archive above folder with name: servicemanager.zip
+- Replace existing servicemanager.zip in source folder
