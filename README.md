@@ -263,9 +263,9 @@ aws_instance.cda_instance (automic_agent_install): Service Manager Name: sm_45FI
 aws_instance.cda_instance (automic_agent_install): Service Manager Port: 8871
 ```
 
-
-## For users want to user other version of CDA Agent and Service Manager
-Users have to create a new artifact follow exactly below structure:
+How to install a downloaded version of the CDA Agent and Service Manager
+---------------------
+You will need to create a new artifact following exactly the below structure:
 ### Linux
 #### Agent
 - Copy files from other x64 version of CDA Agent and create a structure like:
