@@ -169,9 +169,9 @@ $ go build
 ```
 
 # Terraform Automic Agent Install Provisioner
-Automic Agent Install is a Terraform Provisioner which can install CDA Agent and Service Manager on both public and private clouds.
+Automic Agent Install is a Terraform Provisioner which can install CDA Agent and Service Manager on a Red Hat, Ubuntu or Windows instance.
 
-# How to use Provisioner
+# Installation
 - Download Terraform Automic Agent Install Provisioner from [release](https://github.com/Automic/terraform-provider-cda/releases)
 - Extract downloaded artifact and copy terraform-provisioner-automic_agent_install binary to terraform folder
 
