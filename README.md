@@ -177,15 +177,8 @@ Installation
 2. Extract the downloaded artifact and copy the terraform-provisioner-automic_agent_install binary in the terraform installation folder.
 3. The Agent and Service Manager binaries are contained in the Provisioner artifact. They can be downloaded also from the [Automic Marketplace](https://downloads.automic.com/marketplace/browse?search=agent)
 
-## Input
-- Agent, Service Manager artifacts & install script which could be downloaded from released version
-- Automation Engine connection: host, port and system name
-
-## Connection
-Precondition, the instance where the the Agent and Service Manager will be installed must already have an user created. This user must have sufficient rights to execute the install script.
-
-## Argument Reference
-
+Argument Reference
+---------------------
 |Attribute|Type|Mandatory/Optional|Default Value|Description|
 |--|--|--|--|--|
 |destination|String|M||The target folder to install agent & service manager|
@@ -199,8 +192,13 @@ Precondition, the instance where the the Agent and Service Manager will be insta
 |sm_host|String|O|8871|Service Manager host|
 |variables|Map|O|{}|The terraform map that contains override & custom variables for agent configuration|
 
-## Example
-Here is an example to create a aws unix instance and install CDA agent and service manager on this instance.
+Example Usage
+---------------------
+
+### Precondition
+The instance where the the Agent and Service Manager will be installed must already have an user created. This user must have sufficient rights to execute the install script.
+
+The following example creates an AWS Unix instance and installs a CDA agent and Service Manager on it.
 ```
 provider "aws" {
   region = "ap-southeast-1"
