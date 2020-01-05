@@ -3,9 +3,11 @@ Terraform Continuous Delivery Automation Provider
 The CDA provider is used to create and configure Entities in your CDA system. See the Usage sections for an introduction to the provider.
 
 ##### Table of Contents  
+
 [Requirements](#Requirements)
 [Installation](#Installation) 
-[Authentication](#Authentication) 
+[Authentication](#Authentication)
+[Example Usage](#Example Usage) 
 
 Requirements
 ------------
