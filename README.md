@@ -2,6 +2,11 @@ Terraform Continuous Delivery Automation Provider
 ==================
 The CDA provider is used to create and configure Entities in your CDA system. See the Usage sections for an introduction to the provider.
 
+##### Table of Contents  
+[Requirements](#Requirements)
+[Installation](#Installation) 
+[Authentication](#Authentication) 
+
 Requirements
 ------------
 - [Terraform](https://www.terraform.io/downloads.html) 0.10+
@@ -35,7 +40,7 @@ Installation
     
     This will find the plugin locally.
     
-Authentication
+#Authentication
 ----------------------    
 The CDA provider offers the following methods for authentication, in this order:
 
@@ -256,7 +261,7 @@ aws_instance.cda_instance (automic_agent_install): Service Manager Name: sm_45FI
 aws_instance.cda_instance (automic_agent_install): Service Manager Port: 8871
 ```
 
-How to install a downloaded version of a CDA Agent and Service Manager
+How to install a downloaded version of an Agent and Service Manager
 ---------------------
 Create a new artifact following exactly the below structure:
 ### Linux
