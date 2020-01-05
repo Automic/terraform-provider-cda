@@ -40,7 +40,7 @@ Installation
     
     This will find the plugin locally.
     
-#Authentication
+Authentication
 ----------------------    
 The CDA provider offers the following methods for authentication, in this order:
 
