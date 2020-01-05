@@ -181,16 +181,16 @@ Argument Reference
 ---------------------
 |Attribute|Type|Mandatory/Optional|Default Value|Description|
 |--|--|--|--|--|
-|destination|String|M||The target folder to install agent & service manager|
-|source|String|M||The local folder which contains artifacts and install script|
-|agent_name|String|M||Agent name will be installed|
-|agent_port|String|O|2300|Agent port will be install|
-|ae_host|String|M||Automation Engine host|
-|ae_port|String|M||Automation Engine port|
-|ae_system_name|String|M||Automation Engine name|
-|sm_name|String|M||Service Manager name|
-|sm_host|String|O|8871|Service Manager host|
-|variables|Map|O|{}|The terraform map that contains override & custom variables for agent configuration|
+|destination|String|M||The target installation folder.|
+|source|String|M||The local folder which contains the Agent and Service Manager artifacts and the install script.|
+|agent_name|String|M||The Agent name.|
+|agent_port|String|O|2300|The Agent port.|
+|ae_host|String|M||The Automation Engine host.|
+|ae_port|String|M||The Automation Engine port.|
+|ae_system_name|String|M||The Automation Engine name.|
+|sm_name|String|M||The Service Manager name|
+|sm_host|String|O|8871|The Service Manager host.|
+|variables|Map|O|{}|A Terraform map containing override & custom variables which can be used to configure the Agent.|
 
 Example Usage
 ---------------------
